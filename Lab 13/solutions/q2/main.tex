@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{algorithm}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{xcolor}
+\usepackage{cleveref}
+\usepackage{verbatim}
+\usepackage{verbatimbox}
+\usepackage{tikz}
+\usepackage{nicefrac}
+\usepackage{bm}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\makeatletter
+\def\VerbLB{\FV@Command{}{VerbLB}}
+\begingroup
+\catcode`\^^M=\active%
+\gdef\FVC@VerbLB#1{%
+  \begingroup%
+    \FV@UseKeyValues%
+    \FV@FormattingPrep%
+    \FV@CatCodes%
+    \def^^M{ }%
+    \catcode`#1=12%
+    \def\@tempa{\def\FancyVerbGetVerb####1####2}%
+    \expandafter\@tempa\string#1{\mbox{##2}\endgroup}%
+    \FancyVerbGetVerb\FV@EOL}%
+\endgroup
+\makeatother
+
+\usepackage{algpseudocode}
+\newcommand{\SN}[1]{{\color{red}{SN: }{#1}}}
+\newcommand{\PA}[1]{{\color{blue}{PA: }{#1}}}
+\newcommand{\HA}[1]{{\color{olive}{HA: }{#1}}}
+
+\title{CS 240 : Lab 13 - Mechanism Design}
+\author{TAs : Harshvardhan Agarwal, Pulkit Agarwal}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Instructions}
+
+\begin{itemize}
+    \item This lab will be \textbf{graded}. The weightage of each question is provided in this PDF.
+    \item Please read the problem statement and the submission guidelines carefully.
+    \item All code fragments need to be written within the \texttt{TODO} blocks in the given Python files. Do not change any other part of the code unless stated otherwise.
+    \item \textbf{Do not} add any \textbf{additional} \textit{print} statements to the final submission since the submission will be evaluated automatically.
+    \item For any doubts or questions, please contact either the TA assigned to your lab group or one of the 2 TAs involved in making the lab.
+    \item The deadline for this lab is \textbf{Monday, 15 April, 5 PM}.
+    \item The submissions will be checked for plagiarism, and any form of cheating will be penalized.
+\end{itemize}
+
+\noindent The submissions will be on Gradescope. You need to upload the following Python files: \verb|q1.py| and \verb|q2.py|. In Gradescope, you can directly submit these Python files using the upload option (you can either drag and drop or upload by browsing). No need to create a tar or zip file. 
+
+
+
+\newpage
+\section{Voting Rules and Manipulability \hfill [70 marks]}
+
+\subsection{Tasks}
+You have the following tasks to complete in \verb|q1.py|:
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+\newpage
+\section{Gale Shapley Algorithm \hfill [30 marks]}
+
+In the field of mechanism design, the matching problem refers to the task of pairing a set of suitors with a set of reviewers based on their preferences. One interesting scenario is when the number of suitors is equal to the number of reviewers. In this case, the goal is to find a stable matching, where no suitor and reviewer prefer each other over their current partners. The Gale-Shapley algorithm guarantees to find a stable matching for any instance of the problem.
+
+To learn more about the Gale-Shapley algorithm, you can visit its Wikipedia page at \url{https://en.wikipedia.org/wiki/Gale%E2%80%93Shapley_algorithm}.
+
+
+
+
+
+\subsection{Tasks}
+You have the following tasks to complete in \verb|q2.py|:
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+\end{document}
